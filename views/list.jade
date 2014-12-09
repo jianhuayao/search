@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Search Books
+  form#formSearch(name="search",method="post",action="/search")
+    input#inputTitle(type="text", placeholder="title", name="title")
+    button#btnSubmit(type="submit") submit
+  table(border=1)
+    tr
+      td Title
+      td price
+    each book,i in rows
+      tr
+        td #{book.title}
+        td #{book.price}
