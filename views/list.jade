@@ -3,8 +3,13 @@ extends layout
 block content
   h1 Search Books
   form#formSearch(name="search",method="post",action="/search")
-    input#inputTitle(type="text", placeholder="title", name="title")
+    input#inputTitle(type="text", value="#{titles}", name="title")
     button#btnSubmit(type="submit") submit
+  form#formPage(name="page",method="post",action="/search")  
+    - for(var x=1;x<=total_pages;x++)
+      a(href="javascript:;" onclick="document.getElementById('inputPage').value=#{x};parentNode.submit();") #{x} 
+    input#inputTitle(type="hidden", value="#{titles}", name="title")
+    input#inputPage(type="hidden", value="#{x}" , name="current_page")
   table(border=1)
     tr
       td Title

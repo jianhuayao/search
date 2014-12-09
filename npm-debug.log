@@ -19,7 +19,7 @@
 10 error There is likely additional logging output above.
 11 error System Darwin 13.1.0
 12 error command "node" "/usr/local/bin/npm" "start"
-13 error cwd /Users/jhyao/Documents/Projects/node/search
+13 error cwd /Users/jhyao/Documents/Projects/node/books
 14 error node -v v0.10.32
 15 error npm -v 1.4.28
 16 error code ELIFECYCLE
