@@ -14,7 +14,8 @@ router.get('/search', function(req, res) {
 
 /* handle search post request. */
 router.post('/search', function(req, res) {
-	if(!req.body.title.trim()){ res.render('index');return;}
+	var keys = req.body.title.trim();
+	if(!keys || !/^[0-9a-zA-Z ]+$/.test(keys)){ res.render('index');return;}
 	
     var connectionpool = req.connectionpool;
     var current_page = 1;
