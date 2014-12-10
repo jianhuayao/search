@@ -14,6 +14,8 @@ router.get('/search', function(req, res) {
 
 /* handle search post request. */
 router.post('/search', function(req, res) {
+	if(!req.body.title.trim()){ res.render('index');return;}
+	
     var connectionpool = req.connectionpool;
     var current_page = 1;
     if (typeof req.body.current_page != 'undefined'){

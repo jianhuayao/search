@@ -3,5 +3,5 @@ extends layout
 block content
   h1 Search Books
   form#formSearch(name="search",method="post",action="/search")
-    input#inputTitle(type="text", placeholder="title", name="title")
+    input#inputTitle(type="text", placeholder="title", value="" name="title")
     button#btnSubmit(type="submit") submit
